@@ -15,7 +15,7 @@ namespace TransferBatchProcessingData.Data
                 using (var reader = new StreamReader(filePath))
                 {
                     string line;
-                    while ((line = reader.ReadLine()) != null)
+                    while ((line = await reader.ReadLineAsync()) != null)
                     {
                         var parts = line.Split(',');
                         var transfer = new Transfer(){ AccountId = parts[0], TransferId = parts[1], TotalTransferAmount = decimal.Parse(parts[2]) };
