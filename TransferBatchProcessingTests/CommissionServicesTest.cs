@@ -91,11 +91,12 @@ namespace TransferBatchProcessingTests
         {
             // Arrange
             var filePath = "test.txt";
+
             var transfers = new List<Transfer>
-        {
-            new Transfer { TransferId = "1", AccountId = "Account1", TotalTransferAmount = 1000m },
-            new Transfer { TransferId = "2", AccountId = "Account1", TotalTransferAmount = 1500m },
-        };
+            {
+                new Transfer { TransferId = "1", AccountId = "Account1", TotalTransferAmount = 1000m },
+                new Transfer { TransferId = "2", AccountId = "Account1", TotalTransferAmount = 1500m },
+            };
 
             var expectedCommissions = new List<TransferCommissionsDto>
             {
